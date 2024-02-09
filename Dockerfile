@@ -1,6 +1,6 @@
 # Fluent Bit Dockerfile
 
-FROM amazon/aws-for-fluent-bit:stable
+FROM public.ecr.aws/aws-observability/aws-for-fluent-bit:stable
 
 # Copy the redact.conf file into the /fluent-bit/configs/ directory
 COPY redact.conf /fluent-bit/configs/redact.conf
@@ -9,4 +9,3 @@ COPY redact.conf /fluent-bit/configs/redact.conf
 
 # Entry point for Fluent Bit
 ENTRYPOINT ["fluent-bit"]
-CMD ["-c", "/fluent-bit/etc/fluent-bit.conf"]
