@@ -23,6 +23,6 @@ jobs:
       with:
         image: ${{ env.DOCKER_REPOSITORY }}/${{ env.IMAGE_NAME }}
         registry: docker.io
-        tag: lua-1
+        tag: lua-2
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}

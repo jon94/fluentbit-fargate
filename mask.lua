@@ -3,7 +3,7 @@ function redact_called(tag, timestamp, record)
 
     if message then
         -- Replace "called" with "[REDACTED]"
-        local redacted_message = string.gsub(message, 'called', '[REDACTED]')
+        local redacted_message = string.gsub(message, 'called[%w%p]*', '[REDACTED]')
         record["message"] = redacted_message
     end
 
